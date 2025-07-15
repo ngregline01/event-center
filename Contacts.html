@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Degree Fuel</title>
+  <link rel="stylesheet" href="degreefuel.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="home.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="Location.html">Locations</a>
+    <a href="Contacts.html">Contacts</a>
+    <a href="Menu.html">Menu</a>
+  </nav>
+
+  <!-- Contact & Survey Section -->
+  <div class="contact">
+    <h1>REGISTRATION FORM</h1>
+
+    <form action="submit" method="POST">
+      <fieldset>
+        <legend>Contact Information</legend>
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" value="Jane" placeholder="Enter first name" required />
+        <br><br>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" value="Doe" placeholder="Enter last name" required />
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="you@example.com" placeholder="Enter your email" required />
+        <br><br>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required />
+      </fieldset>
+
+      <br><br><br>
+      <fieldset>
+        <legend>Survey</legend>
+
+        <!-- Radio Buttons -->
+          <p>Which participant are you?</p>
+          <label for="investor">investor</label>
+          <input type="radio" id="investor" name="participant_type" value="investor" required />
+         
+          <label for="student">Student</label>
+          <input type="radio" id="student" name="participant_type" value="student" required />
+
+        <label for="section">Which section did you attend?</label>
+        <select id="section" name="section" required>
+          <option value="">--Please choose--</option>
+          <option value="Morning">First Session</option>
+          <option value="Afternoon">Second Session</option>
+          <option value="Evening">Third Session</option>
+        </select>
+
+
+        <!-- Dropdown: How did you hear about us -->
+        <label for="source">How did you hear about us?</label>
+        <select id="source" name="source" required>
+          <option value="">--Select one--</option>
+          <option value="social">Social Media</option>
+          <option value="friend">Friend</option>
+          <option value="flyer">Flyer</option>
+          <option value="eventbrite">Eventbrite</option>
+          <option value="other">Other</option>
+        </select>
+
+        <!-- Feedback Area -->
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" name="feedback" rows="4" cols=25 placeholder="Write your feedback here" required ></textarea>
+
+        <br><br>
+        <!-- Buttons -->
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+        
+      </fieldset>
+    </form>
+  </div>
+
+</body>
+</html>

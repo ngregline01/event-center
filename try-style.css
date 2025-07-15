@@ -1,0 +1,64 @@
+* Basic styling for the navigation bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hide the checkbox input */
+#menu-toggle {
+  display: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Hide the navigation links by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+  }
+
+  /* Display the hamburger icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* When the checkbox is checked, show the menu */
+  #menu-toggle:checked + label + ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
